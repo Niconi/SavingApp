@@ -3,7 +3,8 @@ import StyleSheet from './homeStyle';
 import home1 from '../../assets/images/home1.png';
 import { useNavigation } from '@react-navigation/native';
 
-function HomeComponent() {
+
+function home() {
   const navigation = useNavigation();
   return (
     <View style={StyleSheet.container}>
@@ -24,4 +25,4 @@ function HomeComponent() {
   );
 }
 
-export default HomeComponent;
+export default home;

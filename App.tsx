@@ -2,19 +2,20 @@ import React from 'react';
 import { useColorScheme } from 'react-native';
 import { StatusBar } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import { Navigation } from './src/screens/homeScreen';
+import { Navigation } from './src/screens/RootStack';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-function App() {
+export default function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <Navigation />
+      <SafeAreaView>
+        <GestureHandlerRootView>
+          <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+          <Navigation />
+        </GestureHandlerRootView>
       </SafeAreaView>
     </SafeAreaProvider>
   );
 }
-
-export default App;
