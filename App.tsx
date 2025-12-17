@@ -10,8 +10,8 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView>
-        <GestureHandlerRootView>
+      <SafeAreaView style={{ flex: 1 }}>
+        <GestureHandlerRootView style={{ flex: 1 }}>
           <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
           <Navigation />
         </GestureHandlerRootView>
